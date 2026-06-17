@@ -1,6 +1,7 @@
 // ============================================================
 // PART 1 — JSX and Components
 //
+
 // How to verify your work:
 //   Run "npm run dev" in your terminal from the ttp-checkpoint-2 folder.
 //   Make sure the dev server in the terminal is running. 
@@ -29,7 +30,10 @@ function SectionA() {
   // A1.
   // Declare a variable called myName and assign it your first name as a string.
   // Declare a variable called myCity and assign it the city you are from.
-
+let myName = "Marlin"
+let myCity = "New York City"
+let sum = 25 + 17
+let sumstr = "25 + 17"
 
   // A2.
   // Inside the return below, add a <p> tag that displays your name.
@@ -40,6 +44,7 @@ function SectionA() {
   //      If you don't embed the value correctly,
   //      React treats the text literally and prints the
   //      variable name instead of its value.
+
 
 
   // A3.
@@ -56,11 +61,17 @@ function SectionA() {
   // EXPLAIN: What is JSX? How is it different from plain HTML?
   //          Why do you need curly braces to embed a variable's value?
   //
-  //          answer:
+  //          answer: jsx is a mix of js and html. {} are used to let html to have access to js syntax
 
   return (
     <div>
       <h2>Section A — JSX Basics</h2>
+      <p>name: {myName}</p>
+      <p>city: {myCity}</p>
+      <p>name: {myName.toUpperCase()}</p>
+      <p>name size: {myName.length}</p>
+      <p>sum: {sumstr} = {sum}</p>
+
       {/* Your output goes below this line */}
 
     </div>
@@ -87,12 +98,45 @@ function SectionA() {
 //
 // Write PageHeader here:
 
+export function PageHeader() {
+  let heading = "My React App"
+
+  return (
+    <header>
+      <h1> {heading} </h1>
+      <nav>
+      <a href="#"> Home </a> 
+      <a> About</a>
+      <a> Contact </a>
+      </nav>
+
+    </header>
+  )
+}
+
 
 // B2.
 // Create a component called PageFooter.
 // It should return a <footer> element with a <p> that says "2026 TTP".
 //
 // Write PageFooter here:
+
+export function PageFooter() {
+
+
+  return (
+    <footer>
+      <p> 2026 TTP </p>
+    </footer>
+
+
+  )
+
+
+
+}
+
+
 
 
 function SectionB() {
@@ -104,13 +148,15 @@ function SectionB() {
   //          Why do we split UI into separate components instead of
   //          writing everything inside one big function?
   //
-  //          answer:
+  //          answer: react component is a function that can be reused
 
 
   return (
     <div>
       <h2>Section B — Your Own Components</h2>
       {/* Render your components below */}
+      <PageHeader/>
+      <PageFooter/>
 
     </div>
   )

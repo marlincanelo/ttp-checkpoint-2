@@ -14,6 +14,8 @@
 // Uncomment them again when you are ready to move on.
 // ============================================================
 
+import {PageHeader} from './Part1_Components'
+import {PageFooter} from './Part1_Components'
 import Part1 from './Part1_Components'
 import Part2 from './Part2_Props'
 import Part3 from './Part3_Lists'
@@ -24,7 +26,27 @@ function App() {
   console.log('hello')
   return (
     <main>
-      <Part1 />
+      <div>
+        <Part1 />
+        {/* <PageHeader />
+        <PageFooter/> */}
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <Part2 />
       <Part3 />
       <Part4 />
