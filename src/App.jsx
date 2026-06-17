@@ -31,20 +31,7 @@ function App() {
         {/* <PageHeader />
         <PageFooter/> */}
       </div>
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
       <Part2 />
